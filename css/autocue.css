@@ -1,0 +1,157 @@
+body{
+  background-color:#000;
+  position:absolute;
+  top:0;
+  bottom:0;
+  width:100%;
+}
+
+.aQbutton{
+  display:inline-block;
+  opacity:.6;
+  cursor:pointer;
+  vertical-align:middle;
+  padding-left:2px;
+  width:15%;
+  height:100%;
+}
+
+.aQbutton:hover{
+  opacity:1;
+}
+
+#cRewind{
+  letter-spacing:-10px;
+  width:19%;
+/*  padding-right:5%;*/
+}
+
+#cFastForward{
+  letter-spacing:-10px;
+  margin-left:-3.5%;
+  z-index:9;
+}
+
+#cPause{
+  -moz-transform:rotate(90deg);
+  -webkit-transform:rotate(-90deg);
+  -o-transform:rotate(90deg);
+  -ms-transform:rotate(90deg);
+  position:relative;
+  font-size:200%;
+  font-weight:800;
+  width:15%;
+  height:5%;
+}
+
+#autocueControls{
+  display:none;
+  position:fixed;
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  padding-bottom:.2%;
+}
+
+#cUnplay{
+  position:relative;
+  width:10%;
+  margin-left:-4%;
+  z-index:9;
+}
+
+#cPlay{
+  position:relative;
+  font-size:200%;
+  width: 25%;
+  margin-right:5%;
+}
+
+#cPlay:active{
+  text-shadow:5px 5px 10px #888;
+}
+
+#auto{
+  position:absolute;
+  top:0;
+  color:#fff;
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  margin-left:2%
+  margin-right:2%;
+  width:96%;
+}
+
+#example{
+  height:400px;
+  position:absolute;
+  top:200px;
+  width:95%;
+}  
+
+#fastslow{
+  text-align:center;
+  opacity:.8;
+  background-color:#fff;
+}
+
+#fastslow:hover{
+  opacity:1;
+  cursor:pointer;
+}
+
+#faster{
+  width:50%;
+  right:0px;
+  padding-bottom:3px;
+  display:inline-block;
+/*  border-left:solid 1px;*/
+  font-weight:800;
+}
+
+#faster:hover{
+  background-color:lightgrey;
+}
+
+#slower{
+  width:50%;
+  display:inline-block;
+  left:0px;
+  font-weight:800;
+  padding-bottom:3px;
+ /* border-right:solid 1px;*/
+
+}
+
+#slower:hover{
+  background-color:lightgrey;
+}
+
+a{
+border:0;
+padding:0;
+}
+
+#speed{
+  position:absolute;
+  right:45%;
+  top:0%;
+  background-color:lightgrey;	
+  display:none;
+  text-align:center;
+  opacity:.8;
+}
+
+/* Feedback css */
+.furrghtd td{
+ -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  z-index:1;
+  opacity:.4;
+}
+

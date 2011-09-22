@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Press F11 for full screen - Autocue Teleprompter</title>
+<title>Autocue - Press F11 for full screen</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script type="text/javascript" src="js/autocue.js"></script>
+<link rel="stylesheet" href="css/autocue.css" type="text/css"/>
+<script type="text/javascript">
+function gup( name )
+{
+  name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
+  var regexS = "[\\?&]"+name+"=([^&#]*)";
+  var regex = new RegExp( regexS );
+  var results = regex.exec( window.location.href );
+  if( results == null )
+    return "";
+  else
+    return results[1];
+}
+</script>
+</head>
+<body style="overflow:hidden;background-color:#000;font-family:arial;">
+<div id="que" style="width:100%;height:100%;color:#000;vertical-align:50px;font-family:arial;line-height:150%"></div>
+<script type="text/javascript">
+var q             = gup("q");
+var q             = q.replace(/%0D%0A/g,"<br/>");
+var q             = unescape(q);
+var q             = q.replace(/\+/g," "); // I hate doing this
+var settingString = {};
+var setting = new Array();
+setting[0] = "hoverRequired:"+gup('hoverRequired');
+setting[1] = "fontSize:"+gup('fontSize');
+setting[2] = "autoPlay:"+gup('autoPlay');
+setting[3] = "fontColor:"+gup('fontColor');
+setting[4] = "controlSize:"+gup('controlSize');
+setting[5] = "controlRadius:"+gup('controlRadius');
+setting[6] = "controlOpacity:"+gup('controlOpacity');
+setting[7] = "controlBGColor:"+gup('controlBGColor');
+setting[8] = "controlLocation"+gup('controlLocation');
+
+for (var i = 0;i<setting.length;i++)  // I had had something to drink when I wrote this and it's a complete waste of code.
+{
+  item = setting[i];
+  itemType = "";
+  if (item.length != 0){
+    itemType = item.split(":");
+  }
+  if(itemType[1]){
+    item = '"'+itemType[0]+'"'+":"+'"'+itemType[1]+'"';
+    var name = itemType[0]
+    settingString[name] = itemType[1];
+  }
+}
+$('#que').html(q);
+settingString["autoPlay"] = "true";
+settingString["hoverRequired"] = "true";
+$('#que').autocue(settingString);
+</script>
+
+<script type="text/javascript">
+reformal_wdg_domain    = "autocue";
+reformal_wdg_mode    = 0;
+reformal_wdg_title   = "AutoCue / Teleprompter";
+reformal_wdg_ltitle  = "Leave feedback";
+reformal_wdg_lfont   = "";
+reformal_wdg_lsize   = "";
+reformal_wdg_color   = "#292929";
+reformal_wdg_bcolor  = "#516683";
+reformal_wdg_tcolor  = "#FFFFFF";
+reformal_wdg_align   = "right";
+reformal_wdg_waction = 0;
+reformal_wdg_vcolor  = "#9FCE54";
+reformal_wdg_cmline  = "#E0E0E0";
+reformal_wdg_glcolor  = "#105895";
+reformal_wdg_tbcolor  = "#FFFFFF";
+ 
+reformal_wdg_bimage = "8489db229aa0a66ab6b80ebbe0bb26cd.png";
+ 
+</script>
+
+<script type="text/javascript" language="JavaScript" src="http://idea.informer.com/tab6.js?domain=autocue"></script><noscript><a href="http://autocue.idea.informer.com">AutoCue / Teleprompter feedback </a> <a href="http://idea.informer.com"><img src="http://widget.idea.informer.com/tmpl/images/widget_logo.jpg" /></a></noscript>
+</body>
+</html>
