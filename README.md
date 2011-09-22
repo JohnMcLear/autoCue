@@ -58,5 +58,3 @@ Example: /cue.html?q=this%20is%20a%20string%20that%20needs%20to%20be%20at%20leas
 You should look at cue.html to see how this is implemented.
 
 
-hi
-hi
