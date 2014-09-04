@@ -8,7 +8,7 @@ An autocue (also known as an teleprompter or telescript) is a display device tha
 autocue plugin for jQuery is a simple to use jQuery plugin that allows you to turn any div into an autocue'able object.  autocues are especially useful if you are reading the content out to an audience.  I often use autocues when recording videos that I am going to publish on teh net
 
 **Online demo**<br>
-Visit <http://primaryschoolict.com/autocue/> to test it live
+Visit < http://johnmclear.github.io/autoCue> to test it live
 
 # Example
 
