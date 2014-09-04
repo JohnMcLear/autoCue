@@ -47,8 +47,7 @@ License:  Apache license
     var speed = 0;
 
     // Get current content and a word count
-//    var original = this.html();
-    var original = $('#textarea').val();
+    var original = this.html();
     var original = original.replace(/\n/g, '<br />');
 
     var wordCount = original.split(' ').length;
