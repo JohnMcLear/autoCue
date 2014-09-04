@@ -1,3 +1,5 @@
+# This plugin is not maintained, it requires a LOT of fixing that I don't have time for, feel free to fork and fix..  Apologies.
+
 # An autocue plugin for jQuery.
 
 An autocue (also known as an teleprompter or telescript) is a display device that prompts the person speaking with an electronic visual text of a speech or script. 
